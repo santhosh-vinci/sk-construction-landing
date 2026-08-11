@@ -122,7 +122,7 @@ export default function Hero() {
           <motion.img
             src={heroHome}
             alt="SK Construction luxury villa Chennai"
-            className="md:hidden absolute inset-0 w-full h-full object-contain object-center p-4 md:p-8"
+            className="md:hidden absolute inset-0 w-full h-full object-cover object-center"
             style={{ scale: imageScale }}
           />
 
@@ -130,7 +130,7 @@ export default function Hero() {
           <motion.img
             src={heroHomeArt}
             alt="SK Construction Sketch Mobile"
-            className="md:hidden absolute inset-0 w-full h-full object-contain object-center p-4 md:p-8"
+            className="md:hidden absolute inset-0 w-full h-full object-cover object-center"
             style={{ opacity: scrollOpacity, scale: imageScale }}
           />
 
@@ -189,7 +189,7 @@ export default function Hero() {
         ].join(' ')}>
 
           {/* Card heading */}
-          <h3 className="font-jakarta font-bold text-[15px] leading-snug text-gray-900 mb-2">
+          <h3 className="font-syne font-bold text-[15px] leading-snug text-gray-900 mb-2">
             Building the Future,<br />One Project at a Time
           </h3>
 
@@ -243,8 +243,8 @@ export default function Hero() {
           <a
             href="#projects"
             className={[
-              'font-inter font-semibold text-[12px] text-gray-800',
-              'px-4 py-1.5 rounded-full border border-black/15',
+              'font-inter font-semibold text-[9px] md:text-[12px] text-gray-800 whitespace-nowrap flex-shrink-0',
+              'px-2.5 py-1 md:px-4 md:py-1.5 rounded-full border border-black/15',
               'hover:bg-gray-900 hover:text-white hover:border-gray-900',
               'transition-all duration-200',
             ].join(' ')}
