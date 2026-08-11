@@ -122,7 +122,7 @@ export default function Hero() {
           <motion.img
             src={heroHome}
             alt="SK Construction luxury villa Chennai"
-            className="md:hidden absolute inset-0 w-full h-full object-contain object-center px-4 pt-12 pb-4 md:p-8"
+            className="md:hidden absolute inset-0 w-full h-full object-contain object-center p-4 md:p-8"
             style={{ scale: imageScale }}
           />
 
@@ -130,7 +130,7 @@ export default function Hero() {
           <motion.img
             src={heroHomeArt}
             alt="SK Construction Sketch Mobile"
-            className="md:hidden absolute inset-0 w-full h-full object-contain object-center px-4 pt-12 pb-4 md:p-8"
+            className="md:hidden absolute inset-0 w-full h-full object-contain object-center p-4 md:p-8"
             style={{ opacity: scrollOpacity, scale: imageScale }}
           />
 
@@ -260,38 +260,57 @@ export default function Hero() {
       ══════════════════════════════════════════════════ */}
       <style>{`
         @media (max-width: 959px) {
-          /* Switch section to auto height and allow sticky overflow */
           #home {
             height: auto !important;
             max-height: none !important;
             padding-bottom: 0;
             overflow: visible !important;
-            display: block !important;
+            display: flex !important;
+            flex-direction: column !important;
+            padding-top: 110px !important;
           }
-          /* Photo: sticky at top under nav */
+          /* Photo: below text */
           #home > div:nth-child(1) {
-            position: sticky !important;
-            top: 80px !important;
+            order: 2 !important;
+            position: relative !important;
+            top: auto !important;
             left: 0 !important;
             right: 0 !important;
-            margin-top: 80px !important;
+            margin-top: 0 !important;
             width: 100% !important;
-            height: 65vw !important;
-            min-height: 280px;
-            max-height: 480px;
-            border-top-left-radius: 0 !important;
-            border-top-right-radius: 0 !important;
+            height: 75vw !important;
+            min-height: 320px;
+            max-height: 500px;
+            border-top-left-radius: 32px !important;
+            border-top-right-radius: 32px !important;
+            border-bottom-left-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
             z-index: 10 !important;
           }
-          /* Floating card: inline, full width, negative margin to overlap */
+          /* Floating card -> Native Hero Text */
           #home > div:nth-child(2) {
+            order: 1 !important;
             position: relative !important;
             bottom: auto !important; right: auto !important;
-            width: calc(100% - 48px) !important;
-            margin: -32px 24px 32px !important;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1) !important;
-            border: 1px solid rgba(0,0,0,0.06);
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 32px 48px !important;
+            box-shadow: none !important;
+            background: transparent !important;
+            border: none !important;
+            backdrop-filter: none !important;
             z-index: 30 !important;
+          }
+          #home > div:nth-child(2) h3 {
+            font-size: 2.2rem !important;
+            line-height: 1.15 !important;
+            margin-bottom: 16px !important;
+            letter-spacing: -0.02em !important;
+          }
+          #home > div:nth-child(2) p {
+            font-size: 1rem !important;
+            margin-bottom: 28px !important;
+            color: rgba(17, 24, 39, 0.8) !important;
           }
         }
       `}</style>
