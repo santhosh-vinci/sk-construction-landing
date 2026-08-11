@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Fonts loaded via <link> in index.html */
+
+/* ─── Design tokens (used by non-Tailwind components below the hero) ─── */
+:root {
+  --bg:           #F8F7F4;
+  --bg-section:   #FFFFFF;
+  --text-primary: #111111;
+  --text-secondary:#6B6B6B;
+  --text-muted:   #9A9A9A;
+  --accent:       #C8A96E;
+  --accent-light: rgba(200,169,110,0.12);
+  --border:       rgba(0,0,0,0.08);
+  --border-dark:  rgba(0,0,0,0.15);
+  --card-bg:      #FFFFFF;
+  --surface:      #F0EDE8;
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --transition:   all 0.3s cubic-bezier(0.4,0,0.2,1);
+  --radius:       16px;
+  --radius-sm:    8px;
+  --radius-full:  9999px;
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border-dark); border-radius: 3px; }
+}
+
+/* ─── Utilities shared across lower sections ─── */
+@layer components {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.85rem, 5vw, 2.75rem);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    color: var(--text-primary);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    transition: var(--transition);
+    white-space: nowrap;
+  }
+  .btn-dark {
+    background: var(--text-primary);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+  }
+  .btn-dark:hover { background: #2a2a2a; transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    padding: 13px 28px;
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    border: 1.5px solid var(--border-dark);
+  }
+  .btn-outline:hover { background: var(--text-primary); color: #fff; }
+  .btn-accent {
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  .btn-accent:hover { filter: brightness(1.05); transform: translateY(-1px); }
+  .btn-icon {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--text-primary);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+    text-decoration: none;
+  }
+  .btn-icon:hover { background: var(--accent); }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    background: var(--surface);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+  .pill-accent {
+    background: var(--accent-light);
+    color: #8B6914;
+    border-color: rgba(200,169,110,0.3);
+  }
+  hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+}
