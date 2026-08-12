@@ -90,12 +90,12 @@ export default function ProjectModal({ project, onClose }) {
 
             {/* CTA */}
             <div className="modal-cta">
-              <a href="tel:9962125678" className="btn btn-dark" style={{ flex: 1 }}>
+              <a href="tel:9551258813" className="btn btn-dark" style={{ flex: 1 }}>
                 <Phone size={16} />
                 Call for Similar Project Quote
               </a>
               <a
-                href={`https://wa.me/919962125678?text=${waMsg}`}
+                href={`https://wa.me/919551258813?text=${waMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-icon"

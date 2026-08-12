@@ -5,11 +5,11 @@ export default function FloatingActions() {
   const waMsg = encodeURIComponent("Hi E. Senthil Kumar sir, I'd like to enquire about a construction project in Chennai.");
   return (
     <div className="fab-container">
-      <a href="tel:9962125678" className="fab fab-call" title="Call E. Senthil Kumar">
+      <a href="tel:9551258813" className="fab fab-call" title="Call E. Senthil Kumar">
         <Phone size={20} />
       </a>
       <a
-        href={`https://wa.me/919962125678?text=${waMsg}`}
+        href={`https://wa.me/919551258813?text=${waMsg}`}
         target="_blank"
         rel="noopener noreferrer"
         className="fab fab-wa"

@@ -22,12 +22,12 @@ export default function Footer() {
           </div>
 
           <div className="footer-ctas">
-            <a href="tel:9962125678" className="btn btn-dark btn-sm">
+            <a href="tel:9551258813" className="btn btn-dark btn-sm">
               <Phone size={14} />
-              9962125678
+              9551258813
             </a>
             <a
-              href={`https://wa.me/919962125678?text=${waMsg}`}
+              href={`https://wa.me/919551258813?text=${waMsg}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-icon"

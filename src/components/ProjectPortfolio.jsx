@@ -87,7 +87,7 @@ export default function ProjectPortfolio() {
                 <div className="proj-footer">
                   <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{project.area} · {project.year}</span>
                   <a
-                    href="tel:9962125678"
+                    href="tel:9551258813"
                     className="proj-enquire"
                     onClick={(e) => e.stopPropagation()}
                     title="Call for enquiry"

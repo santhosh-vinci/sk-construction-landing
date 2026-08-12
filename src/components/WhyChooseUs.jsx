@@ -74,8 +74,8 @@ export default function WhyChooseUs() {
               </p>
             </div>
           </div>
-          <a href="tel:9962125678" className="btn btn-primary">
-            <span>Schedule Site Visit (9962125678)</span>
+          <a href="tel:9551258813" className="btn btn-primary">
+            <span>Schedule Site Visit (9551258813)</span>
           </a>
         </div>
       </div>

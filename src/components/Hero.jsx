@@ -73,7 +73,7 @@ export default function Hero() {
   const waMsg = encodeURIComponent(
     'Hi E. Senthil Kumar sir, I visited your SK Construction website and would like to discuss a project.'
   );
-  const waUrl = `https://wa.me/919962125678?text=${waMsg}`;
+  const waUrl = `https://wa.me/919551258813?text=${waMsg}`;
 
   return (
     <>
@@ -203,7 +203,7 @@ export default function Hero() {
 
             {/* Yellow pill "BOOK A MEETING" style — calls builder */}
             <a
-              href="tel:9962125678"
+              href="tel:9551258813"
               className={[
                 'flex items-center px-4 py-2.5 rounded-full',
                 'bg-[#E8B94E] text-white',

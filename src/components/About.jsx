@@ -79,7 +79,7 @@ export default function About() {
               <p className="about-img-card-body">
                 25+ years in Chennai's construction industry. A name synonymous with structural integrity and transparent cost management.
               </p>
-              <a href="tel:9962125678" className="btn btn-dark" style={{ marginTop: 16 }}>
+              <a href="tel:9551258813" className="btn btn-dark" style={{ marginTop: 16 }}>
                 <Phone size={15} />
                 Call for a Free Consultation
               </a>

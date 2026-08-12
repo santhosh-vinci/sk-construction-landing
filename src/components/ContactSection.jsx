@@ -11,11 +11,11 @@ export default function ContactSection() {
     const txt = encodeURIComponent(
       `New Enquiry — SK Construction Website\n\nName: ${form.name}\nPhone: ${form.phone}\nProject Type: ${form.type}\nMessage: ${form.message}`
     );
-    window.open(`https://wa.me/919962125678?text=${txt}`, '_blank');
+    window.open(`https://wa.me/919551258813?text=${txt}`, '_blank');
     setSent(true);
   };
 
-  const waUrl = `https://wa.me/919962125678?text=${encodeURIComponent("Hi E. Senthil Kumar sir, I'd like to enquire about a construction project.")}`;
+  const waUrl = `https://wa.me/919551258813?text=${encodeURIComponent("Hi E. Senthil Kumar sir, I'd like to enquire about a construction project.")}`;
 
   return (
     <section id="contact" className="contact-section">
@@ -39,7 +39,7 @@ export default function ContactSection() {
 
             {/* Direct contact rows */}
             <div className="contact-rows">
-              <a href="tel:9962125678" className="contact-row">
+              <a href="tel:9551258813" className="contact-row">
                 <div className="contact-row-icon">
                   <Phone size={18} />
                 </div>
@@ -50,13 +50,13 @@ export default function ContactSection() {
                 <ArrowUpRight size={18} className="contact-row-arrow" />
               </a>
 
-              <a href="tel:9551258813" className="contact-row">
+              <a href="tel:9962125678" className="contact-row">
                 <div className="contact-row-icon">
                   <Phone size={18} />
                 </div>
                 <div className="contact-row-text">
                   <span className="section-label">ALTERNATE</span>
-                  <strong>+91 95512 58813</strong>
+                  <strong>+91 99621 25678</strong>
                 </div>
                 <ArrowUpRight size={18} className="contact-row-arrow" />
               </a>
@@ -172,7 +172,7 @@ export default function ContactSection() {
                 </button>
 
                 <p style={{ textAlign: 'center', fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: 10 }}>
-                  — or call directly on <a href="tel:9962125678" style={{ color: 'var(--accent)', fontWeight: 600 }}>9962125678</a> —
+                  — or call directly on <a href="tel:9551258813" style={{ color: 'var(--accent)', fontWeight: 600 }}>9551258813</a> —
                 </p>
               </form>
             )}

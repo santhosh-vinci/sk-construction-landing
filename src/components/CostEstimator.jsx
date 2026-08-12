@@ -86,7 +86,7 @@ export default function CostEstimator() {
     `• Est. Timeline: ${timeline}\n\n` +
     `Please contact me for an official site inspection.`
   );
-  const whatsappUrl = `https://wa.me/919962125678?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/919551258813?text=${whatsappMessage}`;
 
   return (
     <section id="estimator" className="estimator-section">
@@ -252,9 +252,9 @@ export default function CostEstimator() {
                   <span>Send Estimate to E. Senthil Kumar via WhatsApp</span>
                 </a>
 
-                <a href="tel:9962125678" className="btn btn-call btn-block">
+                <a href="tel:9551258813" className="btn btn-call btn-block">
                   <Phone size={18} />
-                  <span>Call Builder (9962125678)</span>
+                  <span>Call Builder (9551258813)</span>
                 </a>
               </div>
             </div>

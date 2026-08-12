@@ -28,7 +28,7 @@ export default function Services() {
           {servicesData.map((service) => {
             const IconComponent = iconMap[service.icon] || Home;
             const waMsg = encodeURIComponent(`Hi E. Senthil Kumar sir, I am inquiring about your service: ${service.title}.`);
-            const waUrl = `https://wa.me/919962125678?text=${waMsg}`;
+            const waUrl = `https://wa.me/919551258813?text=${waMsg}`;
 
             return (
               <div key={service.id} className="service-card glass-card">

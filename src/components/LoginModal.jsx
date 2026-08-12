@@ -86,7 +86,7 @@ export default function LoginModal({ isOpen, onClose }) {
           <form className="portal-form" onSubmit={(e) => { e.preventDefault(); alert("Backend login ready! Enter client credentials."); }}>
             <div className="form-group">
               <label>Registered Phone Number / Email</label>
-              <input type="text" placeholder="e.g. 9962125678 or client@gmail.com" required />
+              <input type="text" placeholder="e.g. 9551258813 or client@gmail.com" required />
             </div>
 
             <div className="form-group">
@@ -99,7 +99,7 @@ export default function LoginModal({ isOpen, onClose }) {
                 <input type="checkbox" defaultChecked />
                 <span>Remember this device</span>
               </label>
-              <a href="#" onClick={(e) => { e.preventDefault(); alert("Please call E. Senthil Kumar at 9962125678 for password reset."); }}>Forgot Password?</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); alert("Please call E. Senthil Kumar at 9551258813 for password reset."); }}>Forgot Password?</a>
             </div>
 
             <button type="submit" className="btn btn-primary btn-block">
