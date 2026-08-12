@@ -15,11 +15,6 @@ const points = [
     desc: 'Specializing in duplex house construction, luxury villas, and interiors in and around Pallikaranai, Velachery, OMR, Medavakkam, and Chennai.',
   },
   {
-    icon: ShieldCheck,
-    title: 'Branded Material Matrix',
-    desc: 'Only TATA Tiscon / JSW steel, Ultratech cement, Kajaria tiles, and Kohler bath fittings.',
-  },
-  {
     icon: Clock,
     title: 'On-Time Delivery',
     desc: 'Milestone-based schedules with no hidden cost escalations. Timely handovers guaranteed.',
@@ -51,7 +46,7 @@ export default function About() {
         {/* Two-col layout */}
         <div className="about-grid">
           {/* Left: Image card */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -66,9 +61,9 @@ export default function About() {
             </div>
             <div className="about-img-card">
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
-                <img 
-                  src={builderImg} 
-                  alt="E. Senthil Kumar - SK Construction Chennai" 
+                <img
+                  src={builderImg}
+                  alt="E. Senthil Kumar - SK Construction Chennai"
                   style={{ width: '88px', height: '88px', borderRadius: '50%', objectFit: 'cover', objectPosition: 'top', border: '2px solid #E8B94E' }}
                 />
                 <div>
@@ -87,7 +82,7 @@ export default function About() {
           </motion.div>
 
           {/* Right: Points grid */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
