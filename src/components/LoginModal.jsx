@@ -39,7 +39,7 @@ export default function LoginModal({ isOpen, onClose }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="portal-modal-card" onClick={(e) => e.stopPropagation()}>
-        <button className="portal-close-btn" onClick={onClose}>
+        <button className="portal-close-btn" onClick={onClose} aria-label="Close client portal modal">
           <X size={22} />
         </button>
 
@@ -59,6 +59,8 @@ export default function LoginModal({ isOpen, onClose }) {
           <button 
             className={`portal-tab-btn ${activeTab === 'login' ? 'active-p-tab' : ''}`}
             onClick={() => setActiveTab('login')}
+            aria-label="Sign in to client portal"
+            aria-pressed={activeTab === 'login'}
           >
             <User size={15} />
             <span>Sign In</span>
@@ -67,6 +69,8 @@ export default function LoginModal({ isOpen, onClose }) {
           <button 
             className={`portal-tab-btn ${activeTab === 'register' ? 'active-p-tab' : ''}`}
             onClick={() => setActiveTab('register')}
+            aria-label="Register for client portal"
+            aria-pressed={activeTab === 'register'}
           >
             <Key size={15} />
             <span>Register</span>
@@ -75,6 +79,8 @@ export default function LoginModal({ isOpen, onClose }) {
           <button 
             className={`portal-tab-btn ${activeTab === 'track' ? 'active-p-tab' : ''}`}
             onClick={() => setActiveTab('track')}
+            aria-label="Track project status without logging in"
+            aria-pressed={activeTab === 'track'}
           >
             <Search size={15} />
             <span>Track Project</span>

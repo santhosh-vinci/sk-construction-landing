@@ -12,7 +12,7 @@ const points = [
   {
     icon: Award,
     title: '20+ Projects in Chennai',
-    desc: 'Villas, apartments and interiors across Pallikaranai, Velachery, OMR, Tambaram and Adyar.',
+    desc: 'Specializing in duplex house construction, luxury villas, and interiors in and around Pallikaranai, Velachery, OMR, Medavakkam, and Chennai.',
   },
   {
     icon: ShieldCheck,
@@ -42,7 +42,7 @@ export default function About() {
       <div className="container">
         {/* Header */}
         <div className="about-header">
-          <span className="section-label">WHY SK CONSTRUCTION</span>
+          <span className="section-label">WHY SK CONSTRUCTION CHENNAI</span>
           <h2 className="section-title" style={{ marginTop: 10 }}>
             Built on Trust, Precision<br />& Engineering Integrity
           </h2>
@@ -61,14 +61,14 @@ export default function About() {
             <div className="about-img-wrap">
               <img
                 src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
-                alt="SK Construction completed luxury villa in Chennai"
+                alt="SK Construction Chennai duplex house and luxury villa construction in Pallikaranai"
               />
             </div>
             <div className="about-img-card">
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
                 <img 
                   src={builderImg} 
-                  alt="E. Senthil Kumar" 
+                  alt="E. Senthil Kumar - SK Construction Chennai" 
                   style={{ width: '88px', height: '88px', borderRadius: '50%', objectFit: 'cover', objectPosition: 'top', border: '2px solid #E8B94E' }}
                 />
                 <div>
@@ -77,9 +77,9 @@ export default function About() {
                 </div>
               </div>
               <p className="about-img-card-body">
-                25+ years in Chennai's construction industry. A name synonymous with structural integrity and transparent cost management.
+                25+ years experience in Chennai construction. SK Construction Chennai is the leading builder for duplex house construction and turnkey projects in and around Pallikaranai.
               </p>
-              <a href="tel:9551258813" className="btn btn-dark" style={{ marginTop: 16 }}>
+              <a href="tel:9551258813" className="btn btn-dark" style={{ marginTop: 16 }} aria-label="Call E. Senthil Kumar for a free consultation at 9551258813">
                 <Phone size={15} />
                 Call for a Free Consultation
               </a>

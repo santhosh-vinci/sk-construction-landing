@@ -15,7 +15,7 @@ export default function ProjectModal({ project, onClose }) {
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal-panel" onClick={e => e.stopPropagation()}>
         {/* Close */}
-        <button className="modal-close" onClick={onClose}>
+        <button className="modal-close" onClick={onClose} aria-label="Close project details modal">
           <X size={20} />
         </button>
 
@@ -26,10 +26,10 @@ export default function ProjectModal({ project, onClose }) {
               <img src={images[imgIdx]} alt={project.title} />
               {images.length > 1 && (
                 <>
-                  <button className="img-nav prev" onClick={() => setImgIdx((imgIdx - 1 + images.length) % images.length)}>
+                  <button className="img-nav prev" onClick={() => setImgIdx((imgIdx - 1 + images.length) % images.length)} aria-label="Previous project image">
                     <ChevronLeft size={20} />
                   </button>
-                  <button className="img-nav next" onClick={() => setImgIdx((imgIdx + 1) % images.length)}>
+                  <button className="img-nav next" onClick={() => setImgIdx((imgIdx + 1) % images.length)} aria-label="Next project image">
                     <ChevronRight size={20} />
                   </button>
                   <span className="img-counter">{imgIdx + 1} / {images.length}</span>
@@ -43,8 +43,9 @@ export default function ProjectModal({ project, onClose }) {
                     key={i}
                     className={`thumb ${i === imgIdx ? 'thumb--active' : ''}`}
                     onClick={() => setImgIdx(i)}
+                    aria-label={`View image ${i + 1} of ${project.title}`}
                   >
-                    <img src={img} alt="" />
+                    <img src={img} alt={`${project.title} thumbnail ${i + 1}`} />
                   </button>
                 ))}
               </div>

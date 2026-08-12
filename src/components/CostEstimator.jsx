@@ -108,11 +108,13 @@ export default function CostEstimator() {
               {/* Step 1: Area Slider */}
               <div className="control-group">
                 <div className="label-row">
-                  <label className="control-label">1. Total Built-up Area (sq.ft)</label>
+                  <label htmlFor="area-slider-input" className="control-label">1. Total Built-up Area (sq.ft)</label>
                   <span className="area-value-display gold-text">{area.toLocaleString()} sq.ft</span>
                 </div>
                 <input
+                  id="area-slider-input"
                   type="range"
+                  aria-label="Total Built-up Area in square feet"
                   min="600"
                   max="8000"
                   step="50"
@@ -122,7 +124,7 @@ export default function CostEstimator() {
                 />
                 <div className="range-hints">
                   <span>600 sq.ft (Compact)</span>
-                  <span>2,400 sq.ft (Standard Villa)</span>
+                  <span>2,400 sq.ft (Duplex House / Villa)</span>
                   <span>8,000 sq.ft (Apartments)</span>
                 </div>
               </div>
@@ -135,9 +137,12 @@ export default function CostEstimator() {
                     const pkg = packages[key];
                     const isSelected = packageType === key;
                     return (
-                      <div
+                      <button
                         key={key}
-                        className={`package-card ${isSelected ? 'selected-package' : ''}`}
+                        type="button"
+                        aria-label={`Select ${pkg.name} specification package at ₹${pkg.rate} per square foot`}
+                        aria-pressed={isSelected}
+                        className={`package-card text-left ${isSelected ? 'selected-package' : ''}`}
                         onClick={() => setPackageType(key)}
                       >
                         <div className="pkg-header">
@@ -146,7 +151,7 @@ export default function CostEstimator() {
                         </div>
                         <div className="pkg-rate">₹{pkg.rate} <span className="per-sq">/ sq.ft</span></div>
                         <p className="pkg-desc">{pkg.desc}</p>
-                      </div>
+                      </button>
                     );
                   })}
                 </div>
@@ -159,7 +164,9 @@ export default function CostEstimator() {
                   <div className="addons-grid">
                     <label className={`addon-checkbox ${addons.compoundWall ? 'addon-active' : ''}`}>
                       <input
+                        id="addon-compound-wall"
                         type="checkbox"
+                        aria-label="Compound Wall & Designer Gate (+₹1.5 Lakhs)"
                         checked={addons.compoundWall}
                         onChange={() => toggleAddon('compoundWall')}
                       />
@@ -168,7 +175,9 @@ export default function CostEstimator() {
 
                     <label className={`addon-checkbox ${addons.solarWater ? 'addon-active' : ''}`}>
                       <input
+                        id="addon-solar-water"
                         type="checkbox"
+                        aria-label="Solar Water Heating System (+₹95k)"
                         checked={addons.solarWater}
                         onChange={() => toggleAddon('solarWater')}
                       />
@@ -177,7 +186,9 @@ export default function CostEstimator() {
 
                     <label className={`addon-checkbox ${addons.terraceGarden ? 'addon-active' : ''}`}>
                       <input
+                        id="addon-terrace-garden"
                         type="checkbox"
+                        aria-label="Terrace Gazebo & Waterproof Tile Roof (+₹1.8 Lakhs)"
                         checked={addons.terraceGarden}
                         onChange={() => toggleAddon('terraceGarden')}
                       />
@@ -186,7 +197,9 @@ export default function CostEstimator() {
 
                     <label className={`addon-checkbox ${addons.smartAutomation ? 'addon-active' : ''}`}>
                       <input
+                        id="addon-smart-automation"
                         type="checkbox"
+                        aria-label="Smart Video Doorbell & Touch Switches (+₹1.2 Lakhs)"
                         checked={addons.smartAutomation}
                         onChange={() => toggleAddon('smartAutomation')}
                       />

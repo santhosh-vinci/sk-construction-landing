@@ -11,10 +11,12 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <ProjectPortfolio />
-      <About />
-      <ContactSection />
+      <main id="main-content">
+        <Hero />
+        <ProjectPortfolio />
+        <About />
+        <ContactSection />
+      </main>
       <FloatingActions />
       <Footer />
     </div>

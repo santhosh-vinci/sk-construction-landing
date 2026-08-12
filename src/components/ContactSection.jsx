@@ -34,23 +34,23 @@ export default function ContactSection() {
               Let's Build Something Great Together
             </h2>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: 36 }}>
-              Reach out directly to builder <strong>E. Senthil Kumar</strong> for consultations, site visits, and project quotes. Chennai-based, available 7 days a week.
+              Reach out directly to builder <strong>E. Senthil Kumar</strong> for duplex house construction, villa building, and turnkey projects in and around Pallikaranai, Chennai. Available 7 days a week for consultations and site visits.
             </p>
 
             {/* Direct contact rows */}
             <div className="contact-rows">
-              <a href="tel:9551258813" className="contact-row">
+              <a href="tel:9551258813" className="contact-row" aria-label="Call primary contact E. Senthil Kumar at +91 9551258813">
                 <div className="contact-row-icon">
                   <Phone size={18} />
                 </div>
                 <div className="contact-row-text">
                   <span className="section-label">PRIMARY CALL</span>
-                  <strong>+91 99621 25678</strong>
+                  <strong>+91 95512 58813</strong>
                 </div>
                 <ArrowUpRight size={18} className="contact-row-arrow" />
               </a>
 
-              <a href="tel:9962125678" className="contact-row">
+              <a href="tel:9962125678" className="contact-row" aria-label="Call alternate contact at +91 99621 25678">
                 <div className="contact-row-icon">
                   <Phone size={18} />
                 </div>
@@ -61,7 +61,7 @@ export default function ContactSection() {
                 <ArrowUpRight size={18} className="contact-row-arrow" />
               </a>
 
-              <a href={waUrl} target="_blank" rel="noopener noreferrer" className="contact-row">
+              <a href={waUrl} target="_blank" rel="noopener noreferrer" className="contact-row" aria-label="Chat instantly on WhatsApp with SK Construction Chennai">
                 <div className="contact-row-icon contact-row-icon--wa">
                   <MessageSquare size={18} />
                 </div>
@@ -72,7 +72,7 @@ export default function ContactSection() {
                 <ArrowUpRight size={18} className="contact-row-arrow" />
               </a>
 
-              <a href="mailto:skproperties1999@gmail.com" className="contact-row">
+              <a href="mailto:skproperties1999@gmail.com" className="contact-row" aria-label="Send email to skproperties1999@gmail.com">
                 <div className="contact-row-icon">
                   <Mail size={18} />
                 </div>
@@ -113,7 +113,7 @@ export default function ContactSection() {
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', textAlign: 'center', lineHeight: 1.6 }}>
                   Your message has been dispatched on WhatsApp. E. Senthil Kumar will respond shortly.
                 </p>
-                <button onClick={() => setSent(false)} className="btn btn-outline">Send Another</button>
+                <button onClick={() => setSent(false)} className="btn btn-outline" aria-label="Send another enquiry">Send Another</button>
               </div>
             ) : (
               <form className="contact-form" onSubmit={handleSubmit}>
@@ -126,16 +126,20 @@ export default function ContactSection() {
 
                 <div className="form-row">
                   <div className="form-field">
-                    <label>Your Name</label>
+                    <label htmlFor="contact-name">Your Name</label>
                     <input
+                      id="contact-name"
+                      name="name"
                       type="text" required placeholder="Full name"
                       value={form.name}
                       onChange={e => setForm({ ...form, name: e.target.value })}
                     />
                   </div>
                   <div className="form-field">
-                    <label>Phone / WhatsApp</label>
+                    <label htmlFor="contact-phone">Phone / WhatsApp</label>
                     <input
+                      id="contact-phone"
+                      name="phone"
                       type="tel" required placeholder="10-digit number"
                       value={form.phone}
                       onChange={e => setForm({ ...form, phone: e.target.value })}
@@ -144,35 +148,40 @@ export default function ContactSection() {
                 </div>
 
                 <div className="form-field">
-                  <label>Type of Project</label>
+                  <label htmlFor="contact-type">Type of Project</label>
                   <select
+                    id="contact-type"
+                    name="type"
                     value={form.type}
                     onChange={e => setForm({ ...form, type: e.target.value })}
                   >
-                    <option>Villa Construction</option>
-                    <option>Residential Apartment</option>
-                    <option>Interior Design</option>
-                    <option>Renovation / Floor Addition</option>
-                    <option>Commercial Building</option>
+                    <option value="Duplex House Construction">Duplex House Construction</option>
+                    <option value="Villa Construction">Villa Construction</option>
+                    <option value="Residential Apartment">Residential Apartment</option>
+                    <option value="Interior Design">Interior Design</option>
+                    <option value="Renovation / Floor Addition">Renovation / Floor Addition</option>
+                    <option value="Commercial Building">Commercial Building</option>
                   </select>
                 </div>
 
                 <div className="form-field">
-                  <label>Message</label>
+                  <label htmlFor="contact-message">Message</label>
                   <textarea
-                    rows="3" placeholder="Tell us about your plot, budget or requirement..."
+                    id="contact-message"
+                    name="message"
+                    rows="3" placeholder="Tell us about your plot location, duplex requirement, or budget..."
                     value={form.message}
                     onChange={e => setForm({ ...form, message: e.target.value })}
                   />
                 </div>
 
-                <button type="submit" className="btn btn-dark" style={{ width: '100%', justifyContent: 'center' }}>
+                <button type="submit" className="btn btn-dark" style={{ width: '100%', justifyContent: 'center' }} aria-label="Send enquiry via WhatsApp">
                   <Send size={16} />
                   Send via WhatsApp
                 </button>
 
                 <p style={{ textAlign: 'center', fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: 10 }}>
-                  — or call directly on <a href="tel:9551258813" style={{ color: 'var(--accent)', fontWeight: 600 }}>9551258813</a> —
+                  — or call directly on <a href="tel:9551258813" aria-label="Call E. Senthil Kumar at 9551258813" style={{ color: 'var(--accent)', fontWeight: 600 }}>9551258813</a> —
                 </p>
               </form>
             )}

@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-ctas">
-            <a href="tel:9551258813" className="btn btn-dark btn-sm">
+            <a href="tel:9551258813" className="btn btn-dark btn-sm" aria-label="Call SK Construction at 9551258813">
               <Phone size={14} />
               9551258813
             </a>
@@ -32,6 +32,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="btn-icon"
               style={{ width: 40, height: 40, background: '#25D366' }}
+              aria-label="Chat on WhatsApp with SK Construction"
             >
               <MessageSquare size={17} />
             </a>
@@ -44,10 +45,10 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-address">
             <MapPin size={13} />
-            <span>14-B SK Villa, 9th Street, AGS Colony, Pallikaranai, Chennai – 600 100</span>
+            <span>SK Construction Chennai: 14-B SK Villa, 9th Street, AGS Colony, Pallikaranai, Chennai – 600 100. Premier builders for duplex house and villa construction in and around Pallikaranai.</span>
           </div>
           <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
-            © {year} SK Construction & Interiors. E. Senthil Kumar.
+            © {year} SK Construction Chennai (E. Senthil Kumar). All rights reserved.
           </p>
         </div>
       </div>

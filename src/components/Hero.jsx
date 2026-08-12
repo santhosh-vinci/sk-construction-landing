@@ -195,7 +195,7 @@ export default function Hero() {
 
           {/* Card body copy */}
           <p className="font-inter text-[12.5px] leading-relaxed text-gray-500 mb-4">
-            At SK Construction, we specialise in turning your construction ideas into reality — villas, apartments, and interiors across Chennai.
+            SK Construction Chennai – Turning your dreams into reality with duplex house construction, luxury villas, commercial buildings, and interiors in and around Pallikaranai.
           </p>
 
           {/* ── CTA ROW: yellow pill + dark circle ── */}
@@ -204,6 +204,7 @@ export default function Hero() {
             {/* Yellow pill "BOOK A MEETING" style — calls builder */}
             <a
               href="tel:9551258813"
+              aria-label="Call SK Construction Chennai for a quote at 9551258813"
               className={[
                 'flex items-center px-4 py-2.5 rounded-full',
                 'bg-[#E8B94E] text-white',
@@ -220,7 +221,7 @@ export default function Hero() {
               href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="WhatsApp"
+              aria-label="Chat on WhatsApp with SK Construction Chennai"
               className={[
                 'w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0',
                 'bg-gray-900 text-white',

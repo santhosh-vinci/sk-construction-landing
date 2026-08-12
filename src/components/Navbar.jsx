@@ -74,7 +74,7 @@ export default function Navbar() {
           {/* Arrow icon button */}
           <a
             href="#contact"
-            aria-label="Contact"
+            aria-label="Contact SK Construction Chennai"
             className={[
               'w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0',
               'border border-gray-900/80 text-gray-900',
@@ -90,7 +90,7 @@ export default function Navbar() {
         <button
           className="md:hidden ml-auto p-1.5 text-gray-900 rounded-lg hover:bg-black/5 transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
         >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>

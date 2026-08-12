@@ -36,8 +36,8 @@ export default function ProjectPortfolio() {
             </h2>
           </div>
           <div className="portfolio-header-right">
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', maxWidth: 300, lineHeight: 1.6 }}>
-              From Pallikaranai to OMR, each project is built with branded materials and structural guarantee under E. Senthil Kumar's direct supervision.
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', maxWidth: 320, lineHeight: 1.6 }}>
+              SK Construction Chennai – Duplex house construction, luxury villas, and commercial projects in and around Pallikaranai, Velachery, OMR, and Chennai under E. Senthil Kumar's supervision.
             </p>
           </div>
         </div>
@@ -48,6 +48,8 @@ export default function ProjectPortfolio() {
             <button
               key={c.id}
               className={`filter-btn ${activeCategory === c.id ? 'active' : ''}`}
+              aria-label={`Filter projects by ${c.label}`}
+              aria-pressed={activeCategory === c.id}
               onClick={() => setActiveCategory(c.id)}
             >
               {c.label}
@@ -64,8 +66,12 @@ export default function ProjectPortfolio() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
               key={project.id}
+              role="button"
+              tabIndex={0}
+              aria-label={`View details for project ${project.title} in ${project.location}`}
               className={`proj-card ${idx === 0 && activeCategory === 'all' ? 'proj-card--featured' : ''}`}
               onClick={() => setActiveProject(project)}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActiveProject(project); } }}
             >
               <div className="proj-img-wrap">
                 <img src={project.mainImage} alt={project.title} loading="lazy" />
@@ -90,6 +96,7 @@ export default function ProjectPortfolio() {
                     href="tel:9551258813"
                     className="proj-enquire"
                     onClick={(e) => e.stopPropagation()}
+                    aria-label={`Enquire about ${project.title} with SK Construction`}
                     title="Call for enquiry"
                   >
                     <Phone size={13} />
